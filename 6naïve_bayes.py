@@ -386,3 +386,356 @@ Naive Bayes predicts:
 Yes
 
 because probability is higher for purchase.s"""
+
+
+
+""" 
+
+Naive Bayes Program
+What is this Code About?
+
+This program implements the Naive Bayes Classification Algorithm using Python and Machine Learning libraries.
+
+The program:
+
+Loads a dataset
+Trains a Naive Bayes model
+Predicts outputs
+Checks model accuracy
+Takes user input (Age & Salary)
+Predicts whether a customer will purchase or not
+
+This is a Supervised Machine Learning Classification Problem.
+
+Purpose of This Code
+
+The main purpose of this program is:
+
+To classify data into categories
+To predict outcomes using probability
+To learn patterns from existing data
+To make predictions for new data
+Example
+
+Using:
+
+Age
+Salary
+
+the model predicts:
+
+Purchased = 1
+Not Purchased = 0
+Theory Concepts Used
+1. Machine Learning Classification
+
+Classification means predicting categories/classes.
+
+Examples
+Spam / Not Spam
+Disease / No Disease
+Purchased / Not Purchased
+
+Naive Bayes is a classification algorithm.
+
+2. Naive Bayes Algorithm
+
+Naive Bayes is a probability-based Machine Learning algorithm.
+
+It uses:
+
+Bayes Theorem
+Probability concepts
+
+The word Naive means:
+
+It assumes all input features are independent from each other.
+
+3. Bayes Theorem
+
+Main formula behind Naive Bayes:
+
+P(A∣B)=
+P(B)
+P(B∣A)P(A)
+	​
+
+P(A)
+P(B∣A)
+P(B∣¬A)
+P(A∣B)=
+P(B)
+P(B∣A)P(A)
+	​
+
+≈0.68,P(B)≈0.25
+P(B)=0.25
+P(B|A)P(A)=0.17
+P(A|B)~0.68
+Posterior = useful evidence / total evidence
+Meaning
+Term	Meaning
+P(A|B)	Probability of A when B happens
+P(B|A)	Probability of B when A happens
+P(A)	Probability of A
+P(B)	Probability of B
+4. Gaussian Naive Bayes
+
+The program uses:
+
+GaussianNB()
+
+GaussianNB is used for:
+
+Continuous numeric data
+Normally distributed data
+Example
+Age
+Salary
+
+These are continuous values.
+
+Gaussian assumes data follows a bell curve distribution.
+
+5. Train-Test Split
+
+Dataset is divided into:
+
+Training Data → Model learns
+Testing Data → Model checks performance
+Used in code
+train_test_split()
+Why?
+
+To evaluate whether model predictions are correct.
+
+6. Feature Scaling
+
+Feature scaling is done using:
+
+StandardScaler()
+Why Scaling is Needed?
+
+Different features have different ranges.
+
+Example:
+
+Age = 25
+Salary = 50000
+
+Large salary values can dominate calculations.
+
+Scaling converts values into similar range.
+
+Scaling Formula
+z=
+σ
+x−μ
+	​
+
+x
+μ
+σ
+z=
+σ
+x−μ
+	​
+
+≈1.2
+Φ(z)≈88.5%
+Where
+Symbol	Meaning
+x	Original value
+μ	Mean
+σ	Standard deviation
+z	Scaled value
+7. Model Evaluation Metrics
+
+The program checks model performance using:
+
+Accuracy
+
+Measures total correct predictions.
+
+Formula:
+
+Accuracy=
+Total Predictions
+Correct Predictions
+	​
+
+
+Example
+
+90 correct predictions out of 100
+
+Accuracy = 90%
+
+Precision
+
+Measures:
+
+Out of predicted YES values, how many are actually YES.
+
+Used when False Positives matter.
+
+Example
+
+Spam Email Detection
+
+Recall
+
+Measures:
+
+Out of actual YES values, how many are correctly predicted.
+
+Used in:
+
+Disease prediction
+Fraud detection
+8. Confusion Matrix
+
+Confusion Matrix shows:
+
+Correct predictions
+Wrong predictions
+Example Table
+Actual / Predicted	0	1
+0	40	5
+1	3	52
+Terms in Confusion Matrix
+Term	Meaning
+TP	True Positive
+TN	True Negative
+FP	False Positive
+FN	False Negative
+Real Life Example
+Age	Salary	Buy Phone
+22	20000	No
+35	70000	Yes
+
+For new customer:
+
+Age = 30
+Salary = 65000
+
+Naive Bayes predicts:
+
+YES
+
+because probability of purchase is higher.
+
+Why We Do This Program?
+
+This program helps to:
+
+Understand Machine Learning classification
+Learn probability-based prediction
+Predict future outcomes
+Evaluate model performance
+Use real-world ML workflow
+Applications of Naive Bayes
+Spam email detection
+Disease prediction
+Sentiment analysis
+Customer purchase prediction
+Student result prediction
+Advantages of Naive Bayes
+Simple and easy
+Fast algorithm
+Works well on small datasets
+Less training time
+Good for classification problems
+Easy implementation
+Disadvantages of Naive Bayes
+Assumes features are independent
+Accuracy may reduce for complex datasets
+Not suitable for highly correlated data
+Sometimes oversimplifies prediction
+Important Concepts Used in Program
+Concept	Purpose
+Pandas	Dataset handling
+NumPy	Numerical operations
+train_test_split	Split dataset
+GaussianNB	Train Naive Bayes model
+predict()	Predict outputs
+accuracy_score	Calculate accuracy
+confusion_matrix	Show prediction results
+StandardScaler	Feature scaling
+Overall Working of Program
+Import libraries
+Load dataset
+Separate input and output variables
+Split dataset into training and testing
+Train Naive Bayes model
+Predict test data
+Calculate accuracy, precision, recall
+Create confusion matrix
+Scale features
+Take user input
+Predict final result
+Algorithm / Steps of Program
+Algorithm
+Step 1
+
+Import required libraries.
+
+Step 2
+
+Load dataset using pandas.
+
+Step 3
+
+Separate independent variables (X) and dependent variable (y).
+
+Step 4
+
+Split dataset into training and testing sets.
+
+Step 5
+
+Train the Naive Bayes model using GaussianNB.
+
+Step 6
+
+Predict outputs for testing data.
+
+Step 7
+
+Evaluate model using:
+
+Accuracy
+Precision
+Recall
+Step 8
+
+Generate confusion matrix.
+
+Step 9
+
+Apply feature scaling using StandardScaler.
+
+Step 10
+
+Accept user input:
+
+Age
+Salary
+Step 11
+
+Scale input values.
+
+Step 12
+
+Predict final class/output.
+
+Step 13
+
+Display prediction result.
+
+Final Conclusion
+
+This program demonstrates how the Naive Bayes Machine Learning algorithm is used for classification problems.
+
+The model learns patterns from training data and predicts outcomes for new data using probability and Bayes Theorem.
+"""

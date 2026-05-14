@@ -461,3 +461,470 @@ Probability-based classification algorithm used for text classification.
 Why Naive Bayes Works Well for NLP?
 
 Because text data contains word frequencies and probabilities.ss"""
+
+
+
+"""
+Text Processing and Sentiment Analysis using NLTK and Machine Learning
+What is this Code About?
+
+This program is based on Natural Language Processing (NLP) and Machine Learning.
+
+The code performs different text processing operations using the Python library NLTK and then applies Sentiment Analysis using the Naive Bayes Algorithm.
+
+The program processes text step-by-step like a human language understanding system.
+
+It performs:
+
+Sentence Tokenization
+Word Tokenization
+Frequency Distribution
+Stopword Removal
+Stemming
+Lemmatization
+POS Tagging
+Text Vectorization
+Sentiment Classification using Naive Bayes
+
+The final goal is to predict whether text/reviews are:
+
+Positive
+Negative
+Neutral
+Theory Concepts
+1. Natural Language Processing (NLP)
+Meaning
+
+NLP is a branch of Artificial Intelligence that helps computers understand human language.
+
+Uses
+Chatbots
+Google Translate
+Voice Assistants
+Spam Detection
+Sentiment Analysis
+Example
+
+Input:
+
+“Movie was fantastic”
+
+Computer understands:
+
+movie → subject
+fantastic → positive emotion
+2. Tokenization
+
+Tokenization means breaking text into smaller parts.
+
+There are two types:
+
+A) Sentence Tokenization
+
+Paragraph → Sentences
+
+Example
+
+Input:
+
+Hello. How are you?
+
+Output:
+
+Hello.
+How are you?
+Purpose
+
+Helps computer understand sentence boundaries.
+
+Uses
+Chatbots
+News article analysis
+Voice assistants
+B) Word Tokenization
+
+Sentence → Words
+
+Example
+
+Input:
+
+Weather is great
+
+Output:
+
+Weather
+is
+great
+Purpose
+
+Separates words for analysis.
+
+Uses
+Spam filtering
+Text classification
+Search engines
+3. Frequency Distribution
+Meaning
+
+Counts how many times each word appears.
+
+Example
+Word	Count
+the	5
+good	2
+Purpose
+
+Finds important or repeated words.
+
+Uses
+Trend analysis
+Keyword extraction
+Text mining
+4. Stopword Removal
+What are Stopwords?
+
+Common words with very little meaning.
+
+Examples:
+
+is
+are
+the
+an
+Example
+
+Before:
+
+The weather is great
+
+After:
+
+weather great
+
+Purpose
+
+Removes unnecessary words.
+
+Advantages
+Faster processing
+Better ML accuracy
+Reduces noise
+Disadvantages
+Sometimes removes meaningful words
+5. Stemming
+Meaning
+
+Reduces words to root form.
+
+Example
+Original Word	Stemmed Word
+playing	play
+studies	studi
+flying	fli
+Logic
+
+Removes suffixes like:
+
+ing
+ed
+ly
+Uses
+Search engines
+Information retrieval
+NLP systems
+Advantages
+Fast
+Simple
+Disadvantages
+Words may become incorrect
+
+Example:
+
+study → studi
+
+6. Lemmatization
+Meaning
+
+Converts words into proper dictionary root words.
+
+Example
+Original	Lemmatized
+flying	fly
+studies	study
+Difference Between Stemming and Lemmatization
+Stemming	Lemmatization
+Rough cutting	Dictionary-based
+Faster	More accurate
+Advantages
+Gives meaningful words
+More accurate
+Disadvantages
+Slower than stemming
+7. POS Tagging (Part of Speech Tagging)
+Meaning
+
+Identifies grammatical role of each word.
+
+Example
+Word	Tag	Meaning
+Albert	NNP	Proper Noun
+was	VBD	Verb
+Germany	NNP	Proper Noun
+Uses
+Grammar checking
+Machine translation
+Speech recognition
+8. CountVectorizer
+Meaning
+
+Machine Learning algorithms understand only numbers.
+
+CountVectorizer converts text into numeric vectors.
+
+Example
+
+Sentence:
+
+movie is good
+
+Vector:
+
+movie = 1
+good = 1
+Purpose
+
+Converts words into machine-readable format.
+
+Advantages
+Simple
+Fast
+Disadvantages
+Treats all words equally
+Does not understand importance
+9. TF-IDF (Term Frequency – Inverse Document Frequency)
+Meaning
+
+Gives importance score to words.
+
+Formula
+
+TF-IDF=TF×IDF
+
+Where:
+
+TF = Term Frequency
+IDF = Inverse Document Frequency
+Logic
+Common words → low importance
+Rare important words → high importance
+Example
+Word	Importance
+movie	Low
+fantastic	High
+Advantages
+Better accuracy
+Intelligent weighting
+Disadvantages
+More computation required
+10. Naive Bayes Algorithm
+Meaning
+
+Naive Bayes is a probability-based Machine Learning classification algorithm.
+
+Used mainly for:
+
+Sentiment Analysis
+Spam Detection
+Text Classification
+Formula
+P(A∣B)=
+P(B)
+P(B∣A)P(A)
+	​
+
+P(A)
+P(B∣A)
+P(B∣¬A)
+P(A∣B)=
+P(B)
+P(B∣A)P(A)
+	​
+
+≈0.68,P(B)≈0.25
+P(B)=0.25
+P(B|A)P(A)=0.17
+P(A|B)~0.68
+Posterior = useful evidence / total evidence
+
+Where:
+
+P(A∣B) = Probability of A given B
+P(B∣A) = Probability of B given A
+Logic
+
+Model learns:
+
+amazing → positive
+worst → negative
+Advantages
+Fast
+Works very well for text data
+Easy to implement
+Disadvantages
+Assumes features are independent
+Sometimes less accurate on complex data
+Sentiment Analysis
+Meaning
+
+Detects emotion/opinion from text.
+
+Sentiment Classes
+Value	Meaning
+0	Negative
+1	Somewhat Negative
+2	Neutral
+3	Somewhat Positive
+4	Positive
+Example
+
+Review:
+
+“Movie was amazing”
+
+Prediction:
+
+Positive
+
+Purpose of This Program
+
+The purpose of this code is to:
+
+Understand text data
+Clean and preprocess text
+Convert text into numbers
+Train Machine Learning model
+Predict sentiment of reviews
+Measure prediction accuracy
+Real Life Applications
+Chatbots
+Review analysis
+Social media monitoring
+Spam filtering
+Customer feedback systems
+Recommendation systems
+Advantages of This Complete System
+Automates text analysis
+Fast prediction
+Good accuracy
+Handles large text data
+Useful in real-world NLP applications
+Disadvantages
+Needs large dataset for better accuracy
+Naive Bayes assumptions may reduce accuracy
+Context understanding is limited
+Sarcasm/emotions are difficult to detect
+Why Do We Perform This Program?
+
+We perform this program to:
+
+Teach computer how to understand language
+Analyze opinions automatically
+Classify reviews into sentiments
+Build intelligent NLP systems
+Improve decision-making using text data
+Overall Workflow / Algorithm
+Step-by-Step Procedure
+Step 1
+
+Import required libraries like:
+
+NLTK
+Pandas
+Scikit-learn
+Step 2
+
+Download NLP resources:
+
+punkt
+stopwords
+wordnet
+Step 3
+
+Take input text or dataset.
+
+Step 4
+
+Perform Sentence Tokenization.
+
+Step 5
+
+Perform Word Tokenization.
+
+Step 6
+
+Find Frequency Distribution of words.
+
+Step 7
+
+Remove Stopwords.
+
+Step 8
+
+Apply:
+
+Stemming
+Lemmatization
+Step 9
+
+Perform POS Tagging.
+
+Step 10
+
+Load sentiment dataset.
+
+Step 11
+
+Visualize sentiment distribution using graph.
+
+Step 12
+
+Convert text into numeric vectors using:
+
+CountVectorizer
+TF-IDF
+Step 13
+
+Split dataset into:
+
+Training data
+Testing data
+Step 14
+
+Train Naive Bayes model.
+
+Step 15
+
+Predict sentiment for test data.
+
+Step 16
+
+Calculate model accuracy.
+
+Step 17
+
+Display final results.
+
+Final Conclusion
+
+This program demonstrates a complete NLP pipeline for text processing and sentiment analysis.
+
+The system:
+
+Cleans text
+Converts text into meaningful features
+Uses Machine Learning for classification
+Predicts sentiment effectively
+
+It is one of the most fundamental and important NLP projects used in real-world AI applications.
+"""

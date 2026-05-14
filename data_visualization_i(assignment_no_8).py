@@ -90,3 +90,440 @@ sns.stripplot(x='Sex', y='Age', data=dataset)
 """The stripplot() function is used to plot the violin plot. Like the box plot, the first parameter is the categorical column, the second parameter is the numeric column while the third parameter is the dataset."""
 
 sns.histplot(data=dataset,x='Fare',y='Survived')
+
+"""
+Data Visualization using Seaborn & Matplotlib (Titanic Dataset)
+What is this code about?
+
+This program performs Data Visualization and Exploratory Data Analysis (EDA) on the Titanic dataset using Python libraries like:
+
+Pandas
+NumPy
+Matplotlib
+Seaborn
+
+The code helps us:
+
+Understand the dataset
+Find patterns and relationships
+Analyze passenger details like Age, Fare, Sex, Survival
+Visualize data using graphs and plots
+
+This is mainly used in:
+
+Data Science
+Machine Learning preprocessing
+Statistical analysis
+Pattern recognition
+Theory Concepts
+1. Data Visualization
+Meaning
+
+Data Visualization means representing data in graphical form so that patterns and trends can be understood easily.
+
+Why it is used?
+Easy understanding of large data
+Detect outliers and missing values
+Compare categories
+Find relationships between variables
+Example
+
+Instead of reading thousands of rows, a graph quickly shows:
+
+Who survived more?
+Fare distribution
+Age patterns
+Libraries Used
+1. Pandas
+Purpose
+
+Used for:
+
+Reading CSV files
+Handling tables/dataframes
+Data cleaning
+Example
+
+Reading Titanic dataset.
+
+Advantages
+Fast data handling
+Easy analysis
+Disadvantages
+Large datasets may consume memory
+2. NumPy
+Purpose
+
+Used for:
+
+Numerical operations
+Mathematical calculations
+Example
+
+Finding standard deviation using np.std
+
+Advantages
+Faster calculations
+Disadvantages
+Complex for beginners
+3. Matplotlib
+Purpose
+
+Basic plotting library for graphs.
+
+Example
+
+Creating charts and plots.
+
+Advantages
+Highly customizable
+Disadvantages
+More coding required
+4. Seaborn
+Purpose
+
+Advanced visualization library built on Matplotlib.
+
+Advantages
+Beautiful graphs
+Easy syntax
+Statistical plots available
+Disadvantages
+Slightly slower than matplotlib
+Concepts Used in This Program
+1. Dataset Information
+Functions Used
+info()
+describe()
+dtypes
+isnull().sum()
+Purpose
+
+Used to:
+
+Check dataset structure
+Find missing values
+View statistical summary
+Example
+
+Checking passenger age, fare, null values etc.
+
+2. Dist Plot
+Meaning
+
+Shows distribution of a single variable.
+
+Graph Used
+
+Histogram + Density Curve
+
+Formula Concept
+KDE (Kernel Density Estimation)
+
+Used to estimate probability density.
+
+Example
+
+Distribution of passenger Fare.
+
+Why used?
+
+To check:
+
+Most common values
+Data spread
+Skewness
+Advantages
+Easy distribution understanding
+Disadvantages
+Hard for huge datasets
+3. Joint Plot
+Meaning
+
+Shows relationship between two variables.
+
+Example
+
+Relationship between:
+
+Age
+Fare
+Purpose
+
+To see:
+
+Correlation
+Trends
+Advantages
+Combines scatter plot + histogram
+Disadvantages
+Difficult for categorical data
+4. Pair Plot
+Meaning
+
+Shows relationships among all numerical columns.
+
+Example
+
+Comparing:
+
+Age
+Fare
+Survival
+Purpose
+
+Used in Machine Learning preprocessing.
+
+Advantages
+Multiple comparisons at once
+Disadvantages
+Slow for large datasets
+5. Rug Plot
+Meaning
+
+Displays small lines for each data point.
+
+Purpose
+
+Shows data density.
+
+Example
+
+Passenger fare concentration.
+
+Advantages
+Simple visualization
+Disadvantages
+Overlapping in large datasets
+6. Bar Plot
+Meaning
+
+Shows average/statistical values for categories.
+
+Example
+
+Average fare for males and females.
+
+Formula Used
+Mean Formula
+
+x
+ˉ
+=
+n
+∑x
+	​
+
+
+Standard Deviation Formula
+
+σ=
+N
+∑(x−μ)
+2
+	​
+
+	​
+
+
+Purpose
+
+Category comparison.
+
+Advantages
+Easy comparison
+Disadvantages
+Cannot show detailed distribution
+7. Count Plot
+Meaning
+
+Counts occurrences of categorical values.
+
+Example
+
+How many passengers belong to each Fare category.
+
+Purpose
+
+Frequency analysis.
+
+Advantages
+Simple understanding
+Disadvantages
+Not useful for continuous data
+8. Box Plot
+Meaning
+
+Shows:
+
+Median
+Quartiles
+Outliers
+Formula Concepts
+Median
+
+Middle value of sorted data.
+
+Interquartile Range (IQR)
+
+IQR=Q
+3
+	​
+
+−Q
+1
+	​
+
+
+Example
+
+Age distribution by gender.
+
+Purpose
+
+Detect outliers and spread.
+
+Advantages
+Excellent outlier detection
+Disadvantages
+Less intuitive for beginners
+9. Violin Plot
+Meaning
+
+Combination of:
+
+Box plot
+KDE plot
+Purpose
+
+Shows distribution shape.
+
+Example
+
+Survival distribution by gender and age.
+
+Advantages
+Rich statistical information
+Disadvantages
+Slightly difficult to interpret
+10. Strip Plot
+Meaning
+
+Displays all individual data points.
+
+Purpose
+
+Shows exact data distribution.
+
+Advantages
+Easy point visualization
+Disadvantages
+Overlapping for large datasets
+11. Hist Plot
+Meaning
+
+Histogram-based visualization.
+
+Purpose
+
+Shows frequency distribution.
+
+Example
+
+Fare vs Survival.
+
+Advantages
+Good for distribution analysis
+Disadvantages
+Bin selection affects output
+Purpose of this Entire Program
+
+This program is used for:
+
+Exploratory Data Analysis (EDA)
+Understanding Titanic dataset
+Detecting trends and relationships
+Preparing data for Machine Learning
+Statistical visualization
+Identifying missing values and outliers
+Real-Life Applications
+Used in:
+Data Science projects
+Machine Learning preprocessing
+Business analytics
+Healthcare analytics
+Financial analysis
+Customer behavior analysis
+Advantages of This Program
+Easy data understanding
+Better visualization
+Detect hidden patterns
+Supports ML model preparation
+Quick statistical insights
+Disadvantages
+Large datasets may slow plotting
+Some graphs are difficult to interpret
+Visualization alone cannot predict results
+Algorithm / Steps to Perform This Program
+Step 1
+
+Import required libraries:
+
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Step 2
+
+Load Titanic dataset using CSV file.
+
+Step 3
+
+Check dataset information:
+
+Structure
+Data types
+Null values
+Statistical summary
+Step 4
+
+Perform distribution analysis:
+
+Distplot
+Histplot
+Rugplot
+Step 5
+
+Analyze relationships:
+
+Jointplot
+Pairplot
+Step 6
+
+Perform categorical analysis:
+
+Barplot
+Countplot
+Step 7
+
+Perform statistical visualization:
+
+Boxplot
+Violinplot
+Stripplot
+Step 8
+
+Interpret graphs and identify:
+
+Trends
+Outliers
+Distributions
+Survival patterns
+Step 9
+
+Use insights for Machine Learning or Data Analysis.
+
+Conclusion
+
+This program demonstrates how visualization techniques help analyze and understand datasets effectively. Using Seaborn and Matplotlib, different graph types are created to study passenger information from the Titanic dataset. It is an important concept in Data Science, Machine Learning, and Statistical Analysis.
+"""

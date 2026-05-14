@@ -56,3 +56,263 @@ sns.boxplot(x='Sex', y='Age', data=dataset)
 sns.boxplot(x='Sex', y='Age', data=dataset)
 
 sns.boxplot(x='Survived', y='Fare', data=dataset)
+
+
+"""
+Assignment No. 9 – Data Visualization II (Box Plot using Titanic Dataset)
+What is this code about?
+
+This program is about Data Visualization using Box Plot in Python with the Titanic dataset.
+It uses the libraries Pandas, NumPy, Matplotlib, and Seaborn to analyze and visualize passenger data.
+
+The program mainly shows:
+
+Distribution of passenger Age
+Comparison between Male and Female
+Relationship between Survival and Fare
+Detection of outliers
+Understanding of quartiles and median
+
+The Titanic dataset contains information like:
+
+Age
+Gender (Sex)
+Fare
+Survival status
+
+The code helps in understanding the spread and variation of data visually.
+
+Theory Concepts
+1. Data Visualization
+
+Data Visualization means representing data in graphical form so that it becomes easier to understand patterns, trends, and relationships.
+
+Examples:
+
+Bar Chart
+Histogram
+Pie Chart
+Box Plot
+2. Box Plot
+
+A Box Plot (Box-and-Whisker Plot) is used to represent the statistical distribution of numerical data using a five-number summary.
+
+It shows:
+
+Minimum value
+First Quartile (Q1)
+Median (Q2)
+Third Quartile (Q3)
+Maximum value
+
+It also helps to identify outliers.
+
+3. Five Number Summary
+a) Minimum
+
+Smallest value in dataset.
+
+b) First Quartile (Q1)
+
+25% of data lies below this value.
+
+c) Median (Q2)
+
+Middle value after sorting the data.
+
+d) Third Quartile (Q3)
+
+75% of data lies below this value.
+
+e) Maximum
+
+Largest value in dataset.
+
+4. Interquartile Range (IQR)
+
+IQR measures the spread of middle 50% data.
+
+Formula
+
+IQR=Q3−Q1
+
+Where:
+
+Q1 = First Quartile
+Q3 = Third Quartile
+5. Outliers
+
+Outliers are unusual values that are very high or very low compared to other data points.
+
+In box plot:
+
+Outliers are represented using dots.
+Purpose of this Program
+
+The purpose of this code is to:
+
+Visualize Titanic passenger data
+Compare age distribution between males and females
+Analyze fare distribution
+Study survival patterns
+Detect outliers in data
+Understand quartiles and median visually
+Why do we use this code?
+
+We use this program because:
+
+Graphs are easier to understand than raw tables
+Helps in statistical analysis
+Finds variation in data
+Detects abnormal values
+Helps in machine learning preprocessing
+Useful in exploratory data analysis (EDA)
+Libraries Used
+1. Pandas
+
+Used for:
+
+Reading dataset
+Handling tables/dataframes
+2. NumPy
+
+Used for:
+
+Numerical calculations
+3. Matplotlib
+
+Used for:
+
+Creating graphs and plots
+4. Seaborn
+
+Used for:
+
+Advanced statistical visualizations
+Attractive box plots
+Dataset Used
+
+Dataset: Titanic Dataset (train.csv)
+
+Contains:
+
+Passenger age
+Gender
+Survival status
+Fare amount
+Types of Box Plots Used
+1. Age vs Sex
+sns.boxplot(x='Sex', y='Age', data=dataset)
+Meaning
+
+Shows age distribution of male and female passengers.
+
+2. Age vs Sex with Survival
+sns.boxplot(x='Sex', y='Age', data=dataset, hue='Survived')
+Meaning
+
+Shows:
+
+Gender-wise age distribution
+Survival comparison together
+3. Fare vs Survival
+sns.boxplot(x='Survived', y='Fare', data=dataset)
+Meaning
+
+Shows how fare varies between survived and non-survived passengers.
+
+Example Interpretation
+
+Example:
+If median age for males is 30:
+
+Half male passengers are below 30
+Half are above 30
+
+If dots appear above whiskers:
+
+They are outliers
+Advantages of Box Plot
+Easy to understand distribution
+Detects outliers clearly
+Shows median and quartiles
+Good for comparing categories
+Useful in statistical analysis
+Disadvantages of Box Plot
+Does not show exact data values
+Cannot display detailed distribution shape
+Difficult for beginners sometimes
+Small datasets may not give clear visualization
+Real Life Uses
+
+Box plots are used in:
+
+Data Science
+Machine Learning
+Business Analytics
+Medical Research
+Finance Analysis
+Survey Analysis
+
+Example:
+
+Comparing salaries of employees
+Comparing marks of students
+Analyzing hospital patient age groups
+Overall Conclusion
+
+This program performs statistical visualization using box plots on the Titanic dataset.
+It helps to understand:
+
+Data distribution
+Quartiles
+Median
+Survival patterns
+Outliers
+
+It is an important part of Exploratory Data Analysis (EDA) in Data Science and Machine Learning.
+
+Algorithm / Steps to Perform Program
+Step 1
+
+Import required libraries:
+
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Step 2
+
+Load Titanic dataset using read_csv().
+
+Step 3
+
+Display first few records using head().
+
+Step 4
+
+Create box plot for:
+
+Sex vs Age
+Step 5
+
+Create box plot using hue parameter:
+
+Sex vs Age vs Survival
+Step 6
+
+Create box plot for:
+
+Survival vs Fare
+Step 7
+
+Analyze:
+
+Median
+Quartiles
+Outliers
+Distribution
+Step 8
+
+Interpret the visualization results and conclusions.
+"""

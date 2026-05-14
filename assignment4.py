@@ -453,3 +453,442 @@ Model learning process.
 8. What is testing?
 
 Checking model performance."""
+
+
+"""
+Linear Regression Program – Complete Theory Notes
+What is this code about?
+
+This program is based on Linear Regression, one of the most important Machine Learning algorithms.
+
+The code performs:
+
+Predicting values using past data
+Finding relationship between input and output
+Drawing regression graph
+Measuring prediction accuracy
+
+This program has 2 parts:
+
+Simple Linear Regression
+Predicting 12th marks using 10th marks
+Multiple Linear Regression
+Predicting California house prices using multiple house features
+1. Linear Regression
+Meaning
+
+Linear Regression is a Supervised Machine Learning Algorithm used to predict continuous numerical values.
+
+Example:
+
+Predict house price
+Predict marks
+Predict salary
+Predict temperature
+2. Purpose of this Program
+
+This program is used to:
+
+Learn relationship between variables
+Predict future values
+Analyze data patterns
+Measure prediction accuracy
+Visualize regression line
+3. Real Life Examples
+Input	Output
+Study hours	Exam marks
+Experience	Salary
+House size	House price
+Temperature	Ice cream sales
+4. Types Used in This Program
+A) Simple Linear Regression
+
+Uses:
+
+One input variable
+One output variable
+
+Example:
+
+10th marks → 12th marks
+
+Formula:
+
+Y=mX+b
+m
+b
+-10
+-8
+-6
+-4
+-2
+2
+4
+6
+8
+10
+-10
+-5
+5
+10
+y-intercept
+x-intercept
+
+Where:
+
+Y = predicted output
+X = input
+m = slope
+b = intercept
+B) Multiple Linear Regression
+
+Uses:
+
+Multiple input variables
+One output variable
+
+Example:
+
+Income
+Age
+Rooms
+Location
+
+→ Predict house price
+
+Formula:
+
+Y=b
+0
+	​
+
++b
+1
+	​
+
+X
+1
+	​
+
++b
+2
+	​
+
+X
+2
+	​
+
++⋯+b
+n
+	​
+
+X
+n
+	​
+
+
+5. Theory Concepts Used
+A) Supervised Learning
+
+In supervised learning:
+
+Input and output both are given
+Machine learns relationship from data
+
+Example:
+
+Input	Output
+95	85
+85	95
+B) Independent Variable
+
+Also called:
+
+Input variable
+Feature
+
+Example:
+
+10th marks
+House income
+
+Represented as:
+
+X
+C) Dependent Variable
+
+Also called:
+
+Output variable
+Target variable
+
+Example:
+
+12th marks
+House price
+
+Represented as:
+
+Y
+D) Regression Line
+
+Best fit straight line passing through data points.
+
+Purpose:
+
+Minimize prediction error
+Predict unknown values
+E) Least Square Method
+
+Linear Regression uses:
+
+Least Square Method
+
+Purpose:
+
+Reduce error between actual and predicted values
+
+Formula:
+
+∑(y−
+y
+^
+	​
+
+)
+2
+
+Where:
+
+y = actual value
+ŷ = predicted value
+6. Important Functions Used
+1. NumPy
+
+Used for:
+
+Arrays
+Mathematical calculations
+
+Example:
+
+Store marks data
+2. Pandas
+
+Used for:
+
+Table handling
+Dataset processing
+
+Example:
+
+DataFrames
+3. Matplotlib
+
+Used for:
+
+Graphs
+Charts
+Visualization
+4. np.polyfit()
+
+Purpose:
+
+Creates best fit regression equation
+
+Syntax:
+
+np.polyfit(x, y, 1)
+
+Here:
+
+x = input
+y = output
+1 = straight line
+5. predict()
+
+Purpose:
+
+Predict output values
+
+Example:
+
+Predict marks
+Predict house prices
+7. Performance Evaluation Concepts
+A) Mean Squared Error (MSE)
+
+Measures prediction error.
+
+Formula:
+
+MSE=
+n
+1
+	​
+
+∑(y−
+y
+^
+	​
+
+)
+2
+
+Meaning:
+
+Lower MSE = better model
+B) R² Score
+
+Measures model accuracy.
+
+Formula:
+
+R
+2
+=1−
+SST
+SSR
+	​
+
+
+Range:
+
+0 → poor model
+1 → perfect model
+
+Example:
+
+0.48 means model explains 48% variation
+8. Why Train-Test Split is Used?
+
+Dataset is divided into:
+
+Training data
+Testing data
+
+Purpose:
+
+Prevent overfitting
+Check real performance
+
+Common Split:
+
+80% training
+20% testing
+9. Why We Use This Code?
+
+This code helps to:
+
+Predict future values
+Analyze relationships
+Build ML models
+Evaluate accuracy
+Visualize data
+Learn regression concepts
+10. Advantages of Linear Regression
+Advantages
+Simple and easy
+Fast training
+Easy interpretation
+Good for numerical prediction
+Works well on linear data
+11. Disadvantages of Linear Regression
+Disadvantages
+Works poorly on non-linear data
+Sensitive to outliers
+Assumes linear relationship
+Accuracy may be low on complex data
+12. Applications of Linear Regression
+Field	Use
+Education	Predict marks
+Finance	Predict stock prices
+Healthcare	Predict patient risk
+Real Estate	Predict house prices
+Business	Sales forecasting
+13. Graph Concept
+
+The graph shows:
+
+Actual points
+Predicted points
+Best fit line
+
+Purpose:
+
+Understand prediction visually
+Compare actual vs predicted values
+14. Output Meaning
+Simple Regression Output
+
+Equation example:
+
+Y=0.6438X+26.78
+
+Meaning:
+
+If marks increase,
+predicted marks also increase
+House Price Prediction Output
+
+The model predicts:
+
+California house prices
+using multiple features
+15. Overall Workflow / Algorithm Steps
+Algorithm for Linear Regression Program
+Step 1:
+
+Import required libraries
+
+Step 2:
+
+Load dataset
+
+Step 3:
+
+Prepare input and output variables
+
+Step 4:
+
+Split dataset into training and testing
+
+Step 5:
+
+Create Linear Regression model
+
+Step 6:
+
+Train the model using training data
+
+Step 7:
+
+Predict output values
+
+Step 8:
+
+Calculate accuracy using:
+
+MSE
+R² Score
+Step 9:
+
+Plot graph for visualization
+
+Step 10:
+
+Analyze prediction performance
+
+16. Final Conclusion
+
+This program demonstrates:
+
+Simple Linear Regression
+Multiple Linear Regression
+Prediction techniques
+Error calculation
+Accuracy measurement
+Data visualization
+
+It is one of the most basic and important Machine Learning programs used for predicting continuous numerical values.
+"""

@@ -90,3 +90,347 @@ print(iris[irisVir].describe())
 
 print('Iris-virginica')
 print(iris[irisVir].describe())
+
+"""
+Assignment 3 – Data Analysis and Data Preprocessing using Python
+What is this code about?
+
+This program performs Data Analysis and Data Preprocessing using Python libraries like Pandas, NumPy, and Scikit-learn.
+
+The code works on two datasets:
+
+Mall Customers Dataset
+Used for statistical analysis and categorical data encoding.
+IRIS Dataset
+Used for class-wise statistical analysis of flower species.
+
+The program calculates:
+
+Mean
+Median
+Mode
+Maximum & Minimum values
+Standard Deviation
+Group-wise analysis
+One Hot Encoding
+
+It helps understand data before applying Machine Learning algorithms.
+
+Theory Concepts
+1) Mean (Average)
+Definition
+
+Mean is the average value of all observations.
+
+Formula
+
+x
+ˉ
+=
+n
+∑x
+	​
+
+
+Where:
+
+∑x = Sum of all values
+n = Number of values
+Example
+
+Age values = 20, 25, 30
+
+Mean = (20 + 25 + 30) / 3 = 25
+
+Use
+Finds average behavior of data
+Used in statistics and ML preprocessing
+Advantages
+Easy to calculate
+Represents central value
+Disadvantages
+Affected by outliers
+2) Median
+Definition
+
+Median is the middle value after sorting data.
+
+Formula
+Odd data:
+Middle value
+Even data:
+Median=
+2
+n/2
+th
+ value+(n/2+1)
+th
+ value
+	​
+
+Example
+
+10, 20, 30 → Median = 20
+
+Use
+Used when data has outliers
+Advantages
+Not affected by extreme values
+Disadvantages
+Does not use all data values
+3) Mode
+Definition
+
+Mode is the most frequently occurring value.
+
+Example
+
+2, 3, 3, 5, 6
+
+Mode = 3
+
+Use
+Useful for categorical data
+Advantages
+Simple to identify
+Works with non-numeric data
+Disadvantages
+Sometimes multiple modes exist
+4) Maximum and Minimum
+Definition
+Maximum → Largest value
+Minimum → Smallest value
+Example
+
+10, 50, 70, 5
+
+Max = 70
+Min = 5
+
+Use
+Finds range of data
+Detects extreme values
+5) Standard Deviation
+Definition
+
+Standard deviation measures data spread from mean.
+
+Formula
+
+σ=
+N
+∑(x−μ)
+2
+	​
+
+	​
+
+
+Example
+
+Low SD → Data close to mean
+High SD → Data widely spread
+
+Use
+Measures variability
+Important in ML and analytics
+Advantages
+Gives data distribution information
+Disadvantages
+Sensitive to outliers
+6) GroupBy Operation
+Definition
+
+GroupBy divides data into groups and performs operations.
+
+Example
+
+Average age based on Gender.
+
+Use
+Category-wise analysis
+Business analytics
+Advantages
+Easy grouped calculations
+Disadvantages
+Large datasets may take more time
+7) One Hot Encoding
+Definition
+
+Converts categorical data into numeric binary format.
+
+Example
+Gender	Male	Female
+Male	1	0
+Female	0	1
+Use
+
+Machine Learning models need numeric data.
+
+Advantages
+Removes categorical dependency
+Improves ML processing
+Disadvantages
+Creates many extra columns
+8) Descriptive Statistics
+Definition
+
+Statistical summary of data using:
+
+Count
+Mean
+Std
+Min
+Max
+Quartiles
+Use
+
+Understanding dataset patterns before training ML models.
+
+Why we do this code? (Purpose)
+
+This code is used for:
+
+Understanding dataset structure
+Finding statistical information
+Data cleaning and preprocessing
+Feature preparation for Machine Learning
+Comparing categories and classes
+Encoding categorical variables
+Exploring IRIS flower species data
+
+Before applying ML algorithms, data analysis is necessary. This program performs that preprocessing stage.
+
+Libraries Used
+1) Pandas
+
+Used for:
+
+Reading CSV files
+Data analysis
+Statistical operations
+2) NumPy
+
+Used for:
+
+Numerical operations
+Array calculations
+3) Scikit-learn
+
+Used for:
+
+One Hot Encoding
+Machine Learning preprocessing
+Dataset Used
+Mall_Customers.csv
+
+Contains:
+
+CustomerID
+Genre
+Age
+Annual Income
+Spending Score
+IRIS.csv
+
+Contains:
+
+Sepal length
+Sepal width
+Petal length
+Petal width
+Species
+Real World Applications
+Customer segmentation
+Sales analysis
+Healthcare data analysis
+Student performance analysis
+Machine learning preprocessing
+Business intelligence
+Advantages of this Program
+Easy data analysis
+Helps understand dataset
+Improves ML accuracy
+Detects trends and patterns
+Handles categorical data
+Disadvantages
+Large datasets require more memory
+Encoding increases columns
+Statistical analysis alone cannot predict future data
+Algorithm / Steps to Perform Program
+Step 1
+
+Import required libraries:
+
+Pandas
+NumPy
+Scikit-learn
+Step 2
+
+Load datasets using CSV files.
+
+Step 3
+
+Display dataset information.
+
+Step 4
+
+Calculate statistical measures:
+
+Mean
+Median
+Mode
+Max
+Min
+Standard deviation
+Step 5
+
+Perform row-wise and column-wise analysis.
+
+Step 6
+
+Group data using GroupBy operation.
+
+Step 7
+
+Rename columns if needed.
+
+Step 8
+
+Apply One Hot Encoding on categorical column.
+
+Step 9
+
+Join encoded data with original dataset.
+
+Step 10
+
+Load IRIS dataset.
+
+Step 11
+
+Separate species:
+
+Iris-setosa
+Iris-versicolor
+Iris-virginica
+Step 12
+
+Display descriptive statistics for each species.
+
+Step 13
+
+Analyze and compare results.
+
+Conclusion
+
+This program demonstrates:
+
+Basic statistical analysis
+Data preprocessing techniques
+Group analysis
+Categorical encoding
+Descriptive statistics
+
+It is an important preprocessing step in Data Science and Machine Learning projects.
+"""

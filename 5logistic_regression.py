@@ -63,3 +63,306 @@ input_array = np.array(input_features).reshape(1, -1)
 # Make prediction
 prediction = LR.predict(input_array)[0]
 print(f"Predicted Output: {prediction}")
+
+
+"""
+Logistic Regression Program
+What is this code?
+
+This program is used to perform Logistic Regression, a Machine Learning classification algorithm.
+It reads a dataset, trains a model, predicts output values, and evaluates model performance using different metrics.
+
+The code:
+
+Loads dataset from CSV file
+Splits data into training and testing sets
+Trains Logistic Regression model
+Predicts results
+Calculates evaluation metrics
+Takes user input for prediction
+
+It is mainly used for classification problems where output is categorical like:
+
+Yes / No
+Pass / Fail
+Male / Female
+Disease / No Disease
+Theory Concepts
+1. Machine Learning
+
+Machine Learning is a method where computers learn patterns from data and make predictions automatically.
+
+Types:
+
+Supervised Learning
+Unsupervised Learning
+Reinforcement Learning
+
+This code uses Supervised Learning.
+
+2. Logistic Regression
+
+Logistic Regression is a classification algorithm used to predict categorical outputs.
+
+It predicts probability values between:
+
+0 and 1
+
+If probability > 0.5 → Class 1
+If probability < 0.5 → Class 0
+
+Example:
+
+Spam Email Detection
+Diabetes Prediction
+Customer Purchase Prediction
+3. Dataset
+
+Dataset contains:
+
+Features (Input variables)
+Target Variable (Output)
+
+Example:
+
+Age	Salary	Purchased
+25	30000	0
+40	70000	1
+
+Where:
+
+Age, Salary → Features
+Purchased → Target
+4. Training and Testing Data
+
+Dataset is divided into:
+
+Training Data → Used to train model
+Testing Data → Used to test accuracy
+
+In this code:
+
+75% → Training
+25% → Testing
+Important Formulas Used
+1. Logistic/Sigmoid Function
+
+σ(z)=
+1+e
+−z
+1
+	​
+
+
+This converts output into probability between 0 and 1.
+
+2. Accuracy Formula
+
+Accuracy=
+TP+TN+FP+FN
+TP+TN
+	​
+
+×100
+
+Measures overall correct predictions.
+
+3. Precision Formula
+
+Precision=
+TP+FP
+TP
+	​
+
+
+Measures correctness of positive predictions.
+
+4. Recall Formula
+
+Recall=
+TP+FN
+TP
+	​
+
+
+Measures how many actual positives are detected.
+
+5. F1 Score Formula
+
+F1=
+Precision+Recall
+2×Precision×Recall
+	​
+
+
+Balance between precision and recall.
+
+6. Specificity Formula
+
+Specificity=
+TN+FP
+TN
+	​
+
+
+Measures correctly identified negative cases.
+
+Confusion Matrix Concept
+
+Confusion Matrix compares:
+
+Actual values
+Predicted values
+	Predicted Positive	Predicted Negative
+Actual Positive	TP	FN
+Actual Negative	FP	TN
+
+Where:
+
+TP → True Positive
+TN → True Negative
+FP → False Positive
+FN → False Negative
+Example of Logistic Regression
+Example 1: Email Spam Detection
+
+Input:
+
+Email text features
+
+Output:
+
+Spam
+Not Spam
+Example 2: Disease Prediction
+
+Input:
+
+Age
+BP
+Sugar level
+
+Output:
+
+Disease Present
+Disease Absent
+Example 3: Customer Purchase Prediction
+
+Input:
+
+Salary
+Age
+
+Output:
+
+Buy Product
+Not Buy Product
+Advantages of Logistic Regression
+Simple and easy to implement
+Fast training process
+Works well for binary classification
+Gives probability output
+Less computational cost
+Easy to interpret results
+Disadvantages of Logistic Regression
+Works poorly with complex datasets
+Assumes linear relationship
+Less accurate for non-linear problems
+Sensitive to outliers
+Requires sufficient data
+Why We Use This Code?
+
+This code is used to:
+
+Predict categorical outcomes
+Train classification model
+Evaluate model performance
+Understand prediction accuracy
+Build intelligent prediction systems
+
+Applications:
+
+Medical diagnosis
+Banking fraud detection
+Marketing analysis
+Student performance prediction
+Purpose of the Program
+
+The main purpose is:
+
+To build a Logistic Regression classification model
+To train model using dataset
+To predict outputs for new data
+To calculate performance metrics
+Algorithm / Steps of Program
+Step 1
+
+Import required libraries.
+
+Step 2
+
+Load dataset using pandas.
+
+Step 3
+
+Remove unnecessary column.
+
+Step 4
+
+Separate:
+
+Features (X)
+Target variable (y)
+Step 5
+
+Split dataset into:
+
+Training set
+Testing set
+Step 6
+
+Create Logistic Regression model.
+
+Step 7
+
+Train model using training data.
+
+Step 8
+
+Predict outputs using test data.
+
+Step 9
+
+Generate confusion matrix.
+
+Step 10
+
+Calculate:
+
+Accuracy
+Precision
+Recall
+F1 Score
+Specificity
+Step 11
+
+Take user input for features.
+
+Step 12
+
+Predict output for user data.
+
+Step 13
+
+Display predicted result.
+
+Conclusion
+
+This program demonstrates implementation of Logistic Regression for classification problems using Python and Scikit-Learn.
+It helps in:
+
+Prediction
+Classification
+Performance evaluation
+Decision making using Machine Learning.
+"""

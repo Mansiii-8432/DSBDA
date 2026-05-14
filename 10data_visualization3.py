@@ -309,3 +309,321 @@ Difference between histogram and boxplot?
 Histogram	Boxplot
 Shows distribution	Shows spread/outliers
 Frequency based	Quartile baseds"""
+
+
+
+
+"""
+Data Visualization using Histogram and Boxplot
+What is this code about?
+
+This program is about Data Visualization and Statistical Analysis using Python libraries like NumPy, Pandas, Matplotlib, and Seaborn.
+
+The code:
+
+Reads a dataset from CSV file
+Analyzes data structure
+Finds summary statistics
+Creates Histograms
+Creates Boxplots
+Detects Outliers
+Understands data distribution
+
+This program helps us visually understand the dataset instead of only reading numbers.
+
+Main Theory Concepts Used
+1. Data Visualization
+Meaning
+
+Data Visualization means representing data using graphs and charts.
+
+Why?
+
+Large datasets are difficult to understand directly.
+
+Graphs help us:
+
+understand patterns
+compare values
+detect outliers
+analyze distributions
+Real Life Example
+Student marks analysis
+Salary analysis
+Hospital patient records
+Sales reports
+2. Histogram
+Theory
+
+A Histogram is a graph used to show the frequency distribution of data.
+
+It divides data into intervals called bins.
+
+Structure
+X-axis → Data values
+Y-axis → Frequency/count
+Purpose of Histogram
+
+Used to:
+
+understand data spread
+identify skewness
+observe concentration of values
+analyze frequency
+Example
+
+Student marks:
+
+many students between 70–80
+few students below 30
+
+Histogram clearly shows this distribution.
+
+Advantages
+Easy to understand distribution
+Detects skewed data
+Shows frequency clearly
+Useful in statistics
+Disadvantages
+Exact values are difficult to identify
+Bin size affects graph
+Not suitable for categorical data
+3. Boxplot
+Theory
+
+A Boxplot is used to show:
+
+median
+quartiles
+spread
+outliers
+
+It is also called a Box-and-Whisker Plot.
+
+Important Concepts in Boxplot
+Quartiles
+Formula
+IQR=Q3−Q1
+
+Where:
+
+Q1 = 25% data
+Q3 = 75% data
+Outlier Formula
+
+A value is an outlier if:
+
+x>Q
+3
+	​
+
++1.5(IQR)orx<Q
+1
+	​
+
+−1.5(IQR)
+
+Boxplot Parts
+Part	Meaning
+Middle line	Median
+Box	Interquartile Range
+Whiskers	Data spread
+Dots outside	Outliers
+Example
+
+Student marks:
+45, 50, 55, 60, 100
+
+Here:
+
+100 is very far from other values
+therefore it becomes an outlier
+Advantages
+Detects outliers easily
+Shows spread of data
+Useful for comparison
+Compact visualization
+Disadvantages
+Does not show exact frequency
+Difficult for beginners sometimes
+Less detailed than histogram
+4. Summary Statistics
+Meaning
+
+Summary statistics give important numerical information about data.
+
+Functions like:
+
+mean
+median
+standard deviation
+minimum
+maximum
+
+are calculated.
+
+Purpose
+
+Used for:
+
+quick understanding of dataset
+statistical analysis
+comparing features
+Example
+
+Student marks dataset:
+
+average marks
+highest marks
+lowest marks
+
+can be found quickly.
+
+5. Unique Values
+Meaning
+
+Unique values help identify different categories/classes in data.
+
+Example:
+
+Male/Female
+Pass/Fail
+Yes/No
+Libraries Used
+Library	Purpose
+NumPy	Mathematical operations
+Pandas	Data handling
+Matplotlib	Basic plotting
+Seaborn	Attractive statistical graphs
+Why We Do This Program?
+
+This program is done to:
+
+understand dataset structure
+visualize data distribution
+detect abnormal values
+compare multiple features
+perform statistical analysis
+Purpose of this Code
+
+The main purpose is:
+
+Read dataset
+Analyze columns and data types
+Generate summary statistics
+Create histograms
+Create boxplots
+Detect outliers
+Understand data behavior visually
+Real Life Applications
+Visualization	Real Life Use
+Histogram	Student marks analysis
+Boxplot	Salary outlier detection
+Summary statistics	Business reports
+Unique values	Category analysis
+Data visualization	Healthcare analytics
+Important Formulas
+Interquartile Range
+
+IQR=Q
+3
+	​
+
+−Q
+1
+	​
+
+
+Outlier Detection
+
+x>Q
+3
+	​
+
++1.5(IQR)orx<Q
+1
+	​
+
+−1.5(IQR)
+
+Overall Workflow / Algorithm
+Steps to Perform This Program
+Step 1
+
+Import required libraries:
+
+NumPy
+Pandas
+Matplotlib
+Seaborn
+Step 2
+
+Load dataset using CSV file.
+
+Step 3
+
+Rename columns if needed.
+
+Step 4
+
+Check dataset information:
+
+column names
+data types
+total columns
+Step 5
+
+Find unique values and summary statistics.
+
+Step 6
+
+Create Histograms for numerical columns.
+
+Step 7
+
+Create combined Boxplots for all numerical features.
+
+Step 8
+
+Analyze:
+
+distribution
+spread
+skewness
+outliers
+Step 9
+
+Compare different variables using boxplots.
+
+Step 10
+
+Interpret results and conclusions.
+
+Viva / Oral Questions
+What is Histogram?
+
+A graph showing frequency distribution of data.
+
+What is Boxplot?
+
+A graph showing spread and outliers.
+
+What is Outlier?
+
+A value very far from normal data.
+
+What is IQR?
+
+Difference between Q3 and Q1.
+
+Why use describe()?
+
+To generate summary statistics.
+
+Difference between Histogram and Boxplot
+Histogram	Boxplot
+Shows distribution	Shows spread/outliers
+Frequency based	Quartile based
+Detailed distribution	Compact summary
+
+"""

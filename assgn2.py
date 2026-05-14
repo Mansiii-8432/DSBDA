@@ -87,3 +87,346 @@ import matplotlib.pyplot as plt
 df['math score'].plot(kind = 'hist')
 df['log_math'] = np.log10(df['math score'])
 df['log_math'].plot(kind='hist')
+
+"""
+Assignment 2 – Data Preprocessing and Outlier Detection
+What is this code about?
+
+This program is based on Data Preprocessing and Outlier Detection using Python libraries like Pandas, NumPy, Matplotlib, and Seaborn.
+
+The code performs:
+
+Handling missing values
+Encoding categorical data
+Replacing null values using statistical methods
+Detecting outliers using Boxplot
+Visualizing data using Histogram and Scatter Plot
+Applying Log Transformation
+
+This process is very important before applying Machine Learning algorithms because raw data may contain:
+
+Missing values
+Noise
+Outliers
+Categorical text data
+
+Preprocessing makes the dataset clean and suitable for analysis.
+
+Theory Concepts
+1. Data Preprocessing
+Meaning
+
+Data preprocessing means converting raw data into clean and understandable format.
+
+Purpose
+Improve data quality
+Remove errors
+Handle missing values
+Prepare dataset for Machine Learning
+Example
+
+If student marks are missing in dataset, we replace them using:
+
+Mean
+Median
+Standard deviation
+Advantages
+Improves accuracy
+Better model performance
+Reduces errors
+Disadvantages
+Wrong preprocessing may affect results
+Time consuming for large data
+2. Missing Value Handling
+Meaning
+
+Missing values are empty or null values in dataset.
+
+Example:
+
+Name	Math Score
+A	80
+B	NaN
+Methods Used
+(a) Mean Imputation
+
+Formula:
+
+Mean=
+n
+∑x
+	​
+
+
+Use
+
+Used when data is numerical and evenly distributed.
+
+Example
+
+Scores: 50, 60, 70
+
+Mean = (50+60+70)/3 = 60
+
+Missing value replaced with 60.
+
+Advantage
+
+Simple and fast.
+
+Disadvantage
+
+Affected by outliers.
+
+(b) Median Imputation
+Formula
+
+Median=Middle Value After Sorting
+
+Use
+
+Best when dataset contains outliers.
+
+Example
+
+10, 20, 100
+
+Median = 20
+
+Advantage
+
+Not affected by outliers.
+
+Disadvantage
+
+Ignores actual distribution.
+
+(c) Standard Deviation Imputation
+Formula
+
+σ=
+N
+∑(x−μ)
+2
+	​
+
+	​
+
+
+Use
+
+Measures spread of data.
+
+Advantage
+
+Useful in statistical analysis.
+
+Disadvantage
+
+Complex compared to mean/median.
+
+3. Label Encoding
+Meaning
+
+Machine Learning models cannot understand text values directly.
+
+So categorical values are converted into numbers.
+
+Example:
+
+Gender	Encoded
+Male	1
+Female	0
+Purpose
+
+Convert text data into numerical format.
+
+Advantages
+Easy for ML models
+Saves memory
+Disadvantages
+Model may assume order between categories
+4. Outlier Detection
+Meaning
+
+Outliers are abnormal values far away from normal data.
+
+Example:
+10, 12, 15, 18, 500
+
+Here 500 is an outlier.
+
+Boxplot
+Purpose
+
+Used to identify outliers visually.
+
+Why used?
+Detect abnormal values
+Improve data quality
+Advantages
+Easy visualization
+Quick outlier detection
+Disadvantages
+Not suitable for very complex datasets
+5. Scatter Plot
+Meaning
+
+Shows relationship between two variables.
+
+Example:
+
+Placement Score
+Placement Offer Count
+Purpose
+
+To check correlation between variables.
+
+Advantages
+Easy trend analysis
+Shows clusters/outliers
+Disadvantages
+Difficult with huge datasets
+6. Histogram
+Meaning
+
+Histogram shows frequency distribution of data.
+
+Purpose
+
+Understand data distribution.
+
+Example
+
+Shows how many students scored between:
+
+0–20
+20–40
+40–60 etc.
+Advantages
+Easy understanding
+Shows skewness
+Disadvantages
+Bin size affects result
+7. Log Transformation
+Meaning
+
+Transforms skewed data into normal distribution.
+
+Formula
+y=log
+10
+	​
+
+(x)
+Purpose
+Reduce skewness
+Normalize data
+Handle large value variations
+Example
+
+1000 → log10(1000) = 3
+
+Advantages
+Improves model accuracy
+Reduces effect of outliers
+Disadvantages
+Cannot apply on negative values
+Libraries Used
+1. Pandas
+
+Used for:
+
+Reading CSV files
+Data manipulation
+Handling missing values
+2. NumPy
+
+Used for:
+
+Numerical operations
+Mathematical calculations
+3. Matplotlib
+
+Used for:
+
+Graph plotting
+Histogram
+Scatter plot
+4. Seaborn
+
+Used for:
+
+Advanced visualization
+Boxplot creation
+Purpose of This Program
+
+This program is performed to:
+
+Clean the dataset
+Handle missing values
+Convert categorical values into numeric format
+Detect outliers
+Visualize data
+Transform skewed data
+Prepare dataset for Machine Learning
+Real Life Applications
+Student performance analysis
+Placement prediction systems
+Healthcare data preprocessing
+Banking and finance analysis
+Machine Learning projects
+Algorithm / Steps for the Program
+Step 1
+
+Import required libraries:
+
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Step 2
+
+Load CSV dataset using Pandas.
+
+Step 3
+
+Check dataset for null/missing values.
+
+Step 4
+
+Handle missing values using:
+
+Mean
+Median
+Standard deviation
+Min/Max values
+Step 5
+
+Apply Label Encoding on categorical columns.
+
+Step 6
+
+Detect outliers using Boxplot.
+
+Step 7
+
+Visualize relationship using Scatter Plot.
+
+Step 8
+
+Check data distribution using Histogram.
+
+Step 9
+
+Apply Log Transformation to normalize data.
+
+Step 10
+
+Analyze cleaned dataset for further Machine Learning tasks.
+
+Conclusion
+
+This program demonstrates complete data preprocessing and visualization techniques.
+It helps in cleaning raw data, handling missing values, detecting outliers, and transforming data into suitable format for Machine Learning and Data Analysis.
+"""

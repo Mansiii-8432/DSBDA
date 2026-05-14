@@ -65,3 +65,231 @@ encoded_species
 encoded_df
 df_encoded
 
+
+
+
+"""
+DSBDA Assignment 1 – Data Preprocessing on IRIS Dataset
+What is this program?
+
+This program is based on Data Preprocessing using the Iris Dataset.
+
+The main goal of this program is to prepare raw data before applying Machine Learning algorithms.
+
+The program performs:
+
+Data loading
+Data type conversion
+Normalization
+Label Encoding
+One Hot Encoding
+
+These techniques help convert raw data into machine-readable format.
+
+Theory Concepts Used
+1. Data Preprocessing
+Meaning
+
+Data preprocessing is the process of cleaning and transforming raw data into useful format.
+
+Why We Use It?
+
+Raw data may contain:
+
+Different scales
+Text values
+Missing values
+Unstructured data
+
+Machine Learning algorithms work better on processed data.
+
+Uses
+Machine Learning
+AI systems
+Healthcare analysis
+Banking systems
+Prediction systems
+Advantages
+Improves accuracy
+Faster training
+Better performance
+Disadvantages
+Time consuming
+Wrong preprocessing may reduce accuracy
+2. Normalization
+Meaning
+
+Normalization scales numerical values into a fixed range usually between 0 and 1.
+
+Formula
+
+X
+norm
+	​
+
+=
+X
+max
+	​
+
+−X
+min
+	​
+
+X−X
+min
+	​
+
+	​
+
+
+Example
+Original Value	Normalized Value
+7.0	0.85
+5.1	0.42
+Why We Use It?
+
+Different columns may have different ranges.
+
+Example:
+
+Age = 50
+Salary = 50000
+
+Large values dominate smaller values.
+
+Normalization balances all features.
+
+Uses
+Machine Learning
+Deep Learning
+Data Mining
+Advantages
+Improves model performance
+Faster convergence
+Equal importance to all features
+Disadvantages
+Sensitive to outliers
+Original data meaning may reduce
+3. Label Encoding
+Meaning
+
+Label Encoding converts categorical text data into numbers.
+
+Example
+Species	Encoded Value
+Setosa	0
+Versicolor	1
+Virginica	2
+Why We Use It?
+
+Machine Learning algorithms cannot understand text directly.
+
+They require numerical values.
+
+Uses
+Classification problems
+Categorical data conversion
+Advantages
+Simple
+Fast
+Memory efficient
+Disadvantages
+Creates ordering problem sometimes
+Model may think 2 > 1 > 0
+4. One Hot Encoding
+Meaning
+
+One Hot Encoding creates separate binary columns for every category.
+
+Example
+Species	Setosa	Versicolor	Virginica
+Setosa	1	0	0
+Virginica	0	0	1
+Why We Use It?
+
+To remove ordering problem created by Label Encoding.
+
+Uses
+Machine Learning
+Neural Networks
+Classification models
+Advantages
+Better categorical representation
+No ranking issue
+Disadvantages
+Increases number of columns
+More memory usage
+Purpose of This Program
+
+The main purpose of this program is:
+
+To preprocess IRIS dataset
+Convert categorical data into numerical form
+Normalize numerical features
+Prepare dataset for Machine Learning models
+Real Life Applications
+Flower classification systems
+Healthcare prediction systems
+Banking fraud detection
+Recommendation systems
+Student performance analysis
+Overall Advantages of Program
+Makes data ML-ready
+Improves prediction accuracy
+Better data handling
+Easy analysis
+Overall Disadvantages
+More preprocessing time
+Encoding may increase dataset size
+Wrong scaling affects results
+Algorithm / Steps
+Step 1
+
+Import required libraries.
+
+Step 2
+
+Load IRIS dataset.
+
+Step 3
+
+Check dataset information and datatypes.
+
+Step 4
+
+Convert datatype where needed.
+
+Step 5
+
+Apply normalization on numerical columns.
+
+Step 6
+
+Apply Label Encoding on categorical column.
+
+Step 7
+
+Apply One Hot Encoding.
+
+Step 8
+
+Create final processed dataset.
+
+Step 9
+
+Display transformed dataset.
+
+Conclusion
+
+This assignment demonstrates important preprocessing techniques used before Machine Learning.
+
+The program successfully:
+
+Cleans data
+Converts categorical values
+Scales numerical data
+Prepares dataset for ML algorithms
+
+Data preprocessing is an important step for building accurate and efficient Machine Learning models.
+"""
