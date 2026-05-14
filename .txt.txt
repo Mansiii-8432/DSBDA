@@ -1,0 +1,6 @@
+steps for jupyter kernel installation :
+
+sudo apt update
+sudo apt install python3-pip -y
+pip3 install jupyter notebook ipykernel
+pip3 install --user jupyter notebook ipykernel
