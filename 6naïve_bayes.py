@@ -7,6 +7,61 @@ Original file is located at
     https://colab.research.google.com/drive/1_Jaoxu8F2-X66cLcgc3ZIQCXLifnN3lL
 
 # Naive Bayes
+What is Naive Bayes?
+
+Naive Bayes is a Machine Learning Classification Algorithm used to predict categories/classes.
+
+It works using Bayes Theorem and probability.
+
+Example Uses
+Spam email detection
+Disease prediction
+Sentiment analysis
+Student result prediction
+Customer buying prediction
+Main Idea of Naive Bayes
+
+It predicts using probabilities.
+
+Example:
+
+If:
+
+Young people usually buy products
+High salary people also buy products
+
+Then model predicts whether a new person may buy or not.
+
+The word “Naive” means:
+
+It assumes all features are independent from each other.
+Bayes Theorem
+
+Central formula behind Naive Bayes:
+
+P(A∣B)=
+P(B)
+P(B∣A)P(A)
+	​
+
+P(A)
+P(B∣A)
+P(B∣¬A)
+P(A∣B)=
+P(B)
+P(B∣A)P(A)
+	​
+
+≈0.68,P(B)≈0.25
+P(B)=0.25
+P(B|A)P(A)=0.17
+P(A|B)~0.68
+Posterior = useful evidence / total evidence
+Meaning
+P(A|B) → Probability of A when B happens
+Used for prediction using known data
+
+You don't need to calculate manually because sklearn does it automatically.
 
 ## Importing the libraries
 """
@@ -14,7 +69,22 @@ Original file is located at
 import numpy as np
 import pandas as pd
 
-"""## Importing the dataset"""
+"""## Importing the dataset
+X
+
+Stores independent variables/features.
+
+Example:
+
+[[25,50000],
+ [40,90000]]
+y
+
+Stores target/output column.
+
+Example:
+
+[0,1]"""
 
 dataset = pd.read_csv('data6.csv')
 dataset
@@ -22,30 +92,128 @@ dataset
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
+
 """## Splitting the dataset into the Training set and Test set"""
 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 2)
 
-"""## Training the Naive Bayes model on the Training set"""
+"""## Training the Naive Bayes model on the Training set
+Explanation
+
+Dataset divided into:
+
+Training data
+Testing data
+Why?
+
+Model learns from training data and checks accuracy on testing data.
+
+test_size = 0.25
+25% data for testing
+75% data for training
+random_state = 2
+
+Used to get same random split every time."""
 
 from sklearn.naive_bayes import GaussianNB
 classifier = GaussianNB()
 classifier.fit(X_train, y_train)
 
-"""## Predicting the Test set results"""
+"""## Predicting the Test set results
+Explanation
+GaussianNB
+
+Naive Bayes model for continuous numeric values.
+
+fit()
+
+Trains model using training data.
+
+Why Gaussian?
+
+Because data like:
+
+Age
+Salary
+
+are continuous numeric values.
+
+Gaussian means it assumes data follows normal distribution (bell curve).
+
+Logic Behind Training
+
+Model learns:
+
+Which age/salary belongs to which class
+Probability patterns
+
+Example:
+
+High salary → more chance to purchase
+Young age → less chance
+"""
 
 y_pred = classifier.predict(X_test)
 y_pred
+"""xplanation
+
+Model predicts outputs for testing data.
+
+Example:
+
+[1 0 1 1]
+
+Meaning:
+
+1 = Purchased
+0 = Not Purchased"""
 
 # Evaluate the performance of Model for train_y and
 from sklearn.metrics import precision_score,confusion_matrix,accuracy_score,recall_score
+#These functions evaluate model performance.
 accuracy = accuracy_score(y_test,y_pred)
+"""Formula
+
+Accuracy=
+Total Predictions
+Correct Predictions
+	​
+
+
+Meaning
+
+How many predictions are correct.
+
+Example:
+
+90 correct out of 100
+Accuracy = 90%"""
+
 precision =precision_score(y_test, y_pred,average='micro')
+
+"""Meaning
+
+Out of predicted YES values, how many are actually YES.
+
+Used when false positives matter.
+
+Example:
+Spam detection."""
+
 recall = recall_score(y_test, y_pred,average='micro')
+
+"""Meaning
+
+Out of actual YES values, how many were correctly predicted.
+
+Used in disease detection."""
+
 print(f"Accuracy: {accuracy}")
 print(f"Precision: {precision}")
 print(f"Recall: {recall}")
+
+#Print Results
 
 """## Making the Confusion Matrix"""
 
@@ -55,13 +223,81 @@ cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
 
+"""What is Confusion Matrix?
+
+Table showing:
+
+Correct predictions
+Wrong predictions
+
+Example:
+
+Actual/Predicted	0	1
+0	40	5
+1	3	52
+Terms
+True Positive (TP)
+
+Correct YES prediction
+
+True Negative (TN)
+
+Correct NO prediction
+
+False Positive (FP)
+
+Wrong YES prediction
+
+False Negative (FN)
+
+Wrong NO prediction"""
+
 # Predicting the result
 from sklearn.preprocessing import StandardScaler
 # Feature Scaling (assuming you want to scale your features)
+
+"""Why Scaling?
+
+Age and Salary have different ranges.
+
+Example:
+
+Age = 25
+Salary = 50000
+
+Large salary values dominate calculations.
+
+Scaling converts data into similar range.
+
+Scaling Formula
+z=
+σ
+x−μ
+	​
+
+x
+μ
+σ
+z=
+σ
+x−μ
+	​
+
+≈1.2
+Φ(z)≈88.5%
+
+Where x = original value
+μ = mean
+σ = standard deviation"""
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)  # Fit and transform the training set
 X_test = sc.transform(X_test)  # Only transform the test set
+"""fit_transform()
+Learns scaling from training data
+Applies scaling
+transform()
 
+Only applies learned scaling on test data."""
 # Accept user input for prediction
 age = float(input("Enter age: "))
 salary = float(input("Enter salary: "))
@@ -71,3 +307,82 @@ scaled_input = sc.transform([[age, salary]])  # Scale the input values
 prediction = classifier.predict(scaled_input)  # Make the prediction
 
 print(f"The predicted class for age {age} and salary {salary} is: {prediction[0]}")
+
+"""Import Libraries
+       ↓
+Load Dataset
+       ↓
+Split Input & Output
+       ↓
+Split Train/Test Data
+       ↓
+Train Naive Bayes Model
+       ↓
+Predict Test Data
+       ↓
+Check Accuracy
+       ↓
+Scale Features
+       ↓
+Take User Input
+       ↓
+Predict New Result
+
+Advantages of Naive Bayes
+Simple and fast
+Works well with small datasets
+Good for classification problems
+Easy to implement
+Less training time
+Disadvantages
+Assumes features are independent
+Accuracy may reduce for complex data
+Not best for highly correlated data
+Important Viva/Oral Questions
+1. What is Naive Bayes?
+
+A probability-based classification algorithm using Bayes theorem.
+
+2. Why called “Naive”?
+
+Because it assumes all features are independent.
+
+3. What is GaussianNB?
+
+Naive Bayes model for continuous numeric data.
+
+4. Why use train_test_split?
+
+To divide data into training and testing sets.
+
+5. Why feature scaling is used?
+
+To bring all features into same range.
+
+6. Difference between fit() and predict()
+fit()
+
+Used for training.
+
+predict()
+
+Used for prediction.
+
+Real Life Example
+
+Suppose:
+
+Age	Salary	Buy Phone
+22	20000	No
+35	70000	Yes
+
+If new customer:
+
+Age = 30
+Salary = 65000
+
+Naive Bayes predicts:
+
+Yes
+
+because probability is higher for purchase.s"""

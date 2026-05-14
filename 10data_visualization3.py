@@ -10,13 +10,47 @@ Original file is located at
 import numpy as np
 import pandas as pd
 
+"""Explanation
+numpy → used for mathematical operations and arrays.
+pandas → used for handling datasets (CSV files, tables).
+Why we use?
+
+These libraries make data analysis easy.
+
+Example
+
+If we have student marks in Excel/CSV, pandas helps read and analyze them."""
+
 df = pd.read_csv("data10.csv")
+
+"""Explanation
+pd.read_csv() reads a CSV file.
+Dataset is stored in variable df.
+Logic
+
+CSV file → converted into table format (rows & columns)."""
+
 df.columns = ["col1","col2","col3","col4","col5"]
+
+"""Explanation
+
+Changes column names.
+
+Why?
+
+Sometimes original column names are difficult or missing."""
 
 df.head()
 
 column = len(list(df))
 column
+
+"""Explanation
+list(df) converts column names into list.
+len() counts total columns.
+Logic
+
+If dataset has 5 columns → output = 5."""
 
 """1.List down the features and their types (e.g., numeric, nominal) available in the dataset."""
 
@@ -25,6 +59,14 @@ df.info()
 """Hence the dataset contains 4 numerical columns and 1 object column"""
 
 np.unique(df["col5"])
+
+"""Explanation
+
+Finds unique values in column 5.
+
+Use
+
+To know categories/classes."""
 
 df.describe()
 
@@ -36,13 +78,50 @@ import matplotlib
 import matplotlib.pyplot as plt
 # %matplotlib inline
 
-"""Data Visualization-Create a histogram for each feature in the dataset to illustrate the feature distributions. Plot each histogram."""
+"""Data Visualization-Create a histogram for each feature in the dataset to illustrate the feature distributions. Plot each histogram.
+Explanation
+
+Used for plotting graphs.
+
+Library	Use
+matplotlib	basic plotting
+seaborn	attractive statistical plots
+Histogram
+Theory
+
+Histogram shows distribution of data.
+
+X-axis → values
+Y-axis → frequency/count
+Use
+
+To understand:
+
+Data spread
+Skewness
+Frequency..."""
 
 fig, axes = plt.subplots(2, 2, figsize=(16, 8))
 
+"""Explanation
+
+Creates 4 graph spaces.
+
+Logic
+2 rows
+2 columns
+
+Total = 4 plots."""
 
 axes[0,0].set_title("Distribution of First Column")
 axes[0,0].hist(df["col1"]);
+
+"""Explanation
+Sets title.
+Creates histogram for col1.
+Logic
+
+Counts how many values fall into intervals."""
 
 axes[0,1].set_title("Distribution of Second Column")
 axes[0,1].hist(df["col2"]);
@@ -53,16 +132,52 @@ axes[1,0].hist(df["col3"]);
 axes[1,1].set_title("Distribution of Fourth Column")
 axes[1,1].hist(df["col4"]);
 
+"""Same process for 4 column.Why Histogram Important?
+Example
+
+Student marks histogram:
+
+Many students around 70–80
+Few students below 30
+
+This helps understand performance distribution."""
+
 data_to_plot = [df["col1"],df["col2"],df["col3"],df["col4"]]
 
+""""Explanation
+
+Stores all numeric columns in list.
+
+Use
+
+To plot all boxplots together."""
+
 sns.set_style("whitegrid")
+
+"""Explanation
+
+Adds white grid background.
+
+Use
+
+Makes graph easier to read."""
 # Creating a figure instance
+#Creates plotting area.
 fig = plt.figure(1, figsize=(12,8))
 
 # Creating an axes instance
+"""xplanation
+
+Creates one subplot.
+
+Meaning of 111
+1 row
+1 column
+1st plot"""
 ax = fig.add_subplot(111)
 
 # Creating the boxplot
+#Creates combined boxplots.
 bp = ax.boxplot(data_to_plot)
 
 """Create a boxplot for each feature in the dataset. All of the boxplots should be combined into a single plot. Compare distributions and identify outliers.
@@ -71,7 +186,126 @@ bp = ax.boxplot(data_to_plot)
 
 If we observe closely. for the box 2, interquartile distance is roughly around 0.75 hence the values lying beyond this range of (third quartile + interquartile distance) i.e. roughly around 4.05 will be considered as outliers. Similarly outliers with other boxplots can be found
 """
+"""Boxplot Theory
 
+Boxplot shows:
+
+Median
+Quartiles
+Spread
+Outliers
+Interquartile Range Formula
+
+IQR=Q
+3
+	​
+
+−Q
+1
+	​
+
+
+Where:
+
+Q
+1
+	​
+
+ = 25%
+Q
+3
+	​
+
+ = 75%
+Outlier Formula
+
+Outlier if x>Q
+3
+	​
+
++1.5(IQR) or x<Q
+1
+	​
+
+−1.5(IQR)
+
+Logic of Boxplot
+Parts
+Part	Meaning
+Middle line	Median
+Box	Interquartile range
+Whiskers	Data spread
+Dots outside	Outliers
+Your Observation
+for the box 2, interquartile distance is roughly around 0.75
+Meaning
+
+Most data values are inside normal range.
+
+Values far outside are called outliers.
+
+Example
+
+Student marks:
+
+45,50,55,60,100
+
+100 becomes outlier.
+
+"""
 sns.boxplot(x='col1', y='col2', data=df)
+"""Explanation
+
+Creates boxplot relation between:
+
+col1
+col2
+Use
+
+To compare distributions between variables."""
 
 sns.boxplot(x='col3', y='col4', data=df)
+
+
+
+
+"""Overall Concepts Used
+Concept	Purpose
+Pandas	Data handling
+NumPy	Numerical operations
+Histogram	Data distribution
+Boxplot	Detect outliers
+Mean	Average
+Quartiles	Spread analysis
+IQR	Outlier detection
+Real Life Uses
+Visualization	Real Life Use
+Histogram	Student marks analysis
+Boxplot	Detect abnormal salary
+Summary statistics	Business reports
+Unique values	Find categories
+Viva / Oral Questions
+What is histogram?
+
+Graph showing frequency distribution.
+
+What is boxplot?
+
+Graph showing spread and outliers.
+
+What is outlier?
+
+Value very far from normal data.
+
+What is IQR?
+
+Difference between Q3 and Q1.
+
+Why use describe()?
+
+To get summary statistics.
+
+Difference between histogram and boxplot?
+Histogram	Boxplot
+Shows distribution	Shows spread/outliers
+Frequency based	Quartile baseds"""
